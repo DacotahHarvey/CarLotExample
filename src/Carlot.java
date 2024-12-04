@@ -35,6 +35,18 @@ public class Carlot {
     return results;
   }
 
+  public ArrayList<InventoryItem> sellVehicle(Car licensePlate) {
+    ArrayList<InventoryItem> results = new ArrayList<InventoryItem>();
+
+    for (InventoryItem i : this.inventory) {
+      if (i.getLicencePlate() == licensePlate) {
+        results.add(i);
+      }
+    }
+    
+    return results;
+  }
+
   public void buyCar(InventoryItem newCar) {
     this.inventory.add(newCar);
   }

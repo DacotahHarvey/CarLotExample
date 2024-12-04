@@ -5,14 +5,16 @@ public class Car {
   private String make;
   private String model;
   private int msrpCents;
+  private int priceHistory;
 
-  public Car(int yearManufactured, String licencePlate, String colour, String make, String model, int msrpCents) {
+  public Car(int yearManufactured, String licencePlate, String colour, String make, String model, int msrpCents, int priceHistory) {
     this.yearManufactured = yearManufactured;
     this.licencePlate = licencePlate;
     this.colour = colour;
     this.make = make;
     this.model = model;
     this.msrpCents = msrpCents;
+    this.priceHistory = priceHistory;
   }
 
   @Override
@@ -24,6 +26,7 @@ public class Car {
             ", Make='" + this.make + '\'' +
             ", Model='" + this.model + '\'' +
             ", MSRPCents='" + this.msrpCents + '\'' +
+            ", Price Sold History='" + this.priceHistory + '\'' +
             '}';
   }
 
@@ -51,6 +54,10 @@ public class Car {
     return this.msrpCents = msrpCents;
   }
 
+  public int setpriceHistory(int priceHistory) {
+    return this.priceHistory = priceHistory;
+  }
+
   public int getYearManufactured() {
     return this.yearManufactured;
   }
@@ -73,6 +80,10 @@ public class Car {
 
   public int getMsrpCents() {
     return this.msrpCents;
+  }
+
+  public int getPriceHistory() {
+    return this.priceHistory;
   }
 
 
